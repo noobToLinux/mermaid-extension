@@ -6,9 +6,14 @@ function check_url(text){
     return regex.test(text);
 }
 
+function check_name(text){
+    const regex = /^[A-Za-z]+$/
+    return regex.test(text);
+}
+
 let row_counter = 1;
 
-function add_row(value='') {
+function add_row(name='',value='') {
     // Seleccionar el div específico antes del cual se insertará el nuevo div
     const targetDiv = document.getElementById("add-url-element");
 
@@ -26,6 +31,18 @@ function add_row(value='') {
     const newDiv = document.createElement("div");
     newDiv.className = "url-element";
     newDiv.id = `url-element-${row_counter}`; // Generar un id único usando la marca de tiempo
+
+    // Crear y añadir el span
+    const span_0 = document.createElement("span");
+    span_0.textContent = "Name for icons";
+    newDiv.appendChild(span_0);
+
+    // Crear y añadir el input
+    const input_0 = document.createElement("input");
+    input_0.type = "text";
+    input_0.className = "name-input";
+    input_0.value = name;
+    newDiv.appendChild(input_0);
 
     // Crear y añadir el span
     const span = document.createElement("span");
@@ -55,11 +72,17 @@ function add_row(value='') {
 function saveInputsToStorage() {
     // Seleccionamos todos los inputs con la clase "url-input"
     const inputs = document.querySelectorAll('.url-input');
+    const names = document.querySelector('.name-input')
 
     // Obtenemos los valores de cada input
     const values = [];
-    inputs.forEach(input => {
-        values.push(input.value.trim()); // Guardamos el valor del input sin espacios adicionales
+    inputs.forEach((input,index) => {
+        values.push(
+            {
+                url:input.value.trim(),
+                name:names[index]
+            }
+        ); // Guardamos el valor del input sin espacios adicionales
     });
 
     // Guardamos los valores en chrome.storage.local
@@ -74,7 +97,10 @@ function loadInputsFromStorage() {
         if (result.urls) {
             result.urls.forEach((input, index) => {
                 if (result.urls[index]) {
-                    add_row(result.urls[index]); // Rellenamos el input con el valor guardado
+                    add_row(
+                        result.urls[index].name,
+                        result.urls[index].url
+                    ); // Rellenamos el input con el valor guardado
                 }
             });
         }
