@@ -1,0 +1,68 @@
+:root {
+    --background-color: #253D5B;
+    --secondary-color: #A09ABC;
+    --text-color: #FEFADC;
+    --padding: 10px;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: var(--padding);
+    font-size: 16px;
+}
+
+.url-element {
+    background-color: rgba(0,0,0,0);
+    border-color: var(--secondary-color);
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    /**/
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap:5px;
+}
+
+#add-url-element {
+    border:none;
+}
+
+/* ---------------------------- Inputs ---------------------------- */
+input[type="text"] {
+    background-color: var(--text-color);
+    color: black;
+}
+
+input[type="text"]:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+
+#delete-button-1 {
+    background-color: red; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+#delete-button-1:hover {
+    background-color: darkred; /* Fondo más oscuro al pasar el mouse */
+}
+
+#add-url-button {
+    width: 50%;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid rgb(55,90,134); /* Borde marcado */
+    border-radius: 20px; /* Bordes completamente redondeados */
+    color: var(--text-color); /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+#add-url-button:hover {
+    background-color: rgba(55,90,134,0.5);
+}
