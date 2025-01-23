@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Mermaid Live Editor with Icons",
+    "version": "0.1",
+    "description": "Allows using icons from iconify on mermaid live editor.",
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "host_permissions": [
+        "https://mermaid.live/*"
+    ]
+}
