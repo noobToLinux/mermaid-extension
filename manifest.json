@@ -23,7 +23,7 @@
     "content_scripts": [
         {
             "matches": [
-                "https://mermaid.live/",
+                "https://mermaid.live/*",
                 "https://noobtolinux.github.io/mermaid-live-editor/*",
                 "https://mermaid-js.github.io/mermaid-live-editor/*"
             ],
