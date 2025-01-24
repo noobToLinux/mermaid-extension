@@ -24,6 +24,7 @@ body {
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     gap:5px;
+    min-width: 300px;
 }
 
 #add-url-element {
@@ -59,19 +60,18 @@ body {
 }
 
 
-#delete-button-1 {
+.delete-button {
     background-color: red; /* Fondo rojo */
     color: white; /* Texto blanco */
     font-weight: bold; /* Texto en negrita */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
 
-#delete-button-1:hover {
+.delete-button:hover {
     background-color: darkred; /* Fondo más oscuro al pasar el mouse */
 }
 
-#add-url-button {
-    width: 50%;
+.add-save-url-buttons {
     background-color: rgba(0,0,0,0);
     border: 2px solid rgb(55,90,134); /* Borde marcado */
     border-radius: 20px; /* Bordes completamente redondeados */
@@ -80,6 +80,14 @@ body {
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
 
-#add-url-button:hover {
+.add-save-url-buttons:hover {
     background-color: rgba(55,90,134,0.5);
+}
+
+#add-url-button {
+    width: 30%;
+}
+
+#save-url-button {
+    width: 20%;
 }

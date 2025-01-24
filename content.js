@@ -1,11 +1,4 @@
 import mermaid from 'CDN/mermaid.esm.mjs';
-mermaid.registerIconPacks([
-    {
-        name: 'logos',
-        loader: () =>
-        fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()),
-    },
-]);
 
 
 function UrlsToRegisterObject(UrlOb){
@@ -13,17 +6,15 @@ function UrlsToRegisterObject(UrlOb){
     let url = UrlOb.url;
     return {
         name: name,
-        loader: () => fetch(url).then((res) => res.json()),
+        loader: () => import(url).then((module) => module.icons),
     }
 }
 
-function loadInputsFromStorage() {
-    // Recuperamos los datos de chrome.storage.local
-    chrome.storage.local.get('urls', function (result) {
-        if (result.urls) {return result.urls;}
-    });
+function loadInputs() {
+    const data = JSON.parse(document.getElementById('extension-data').innerText)
+    return data;
 }
 
 mermaid.registerIconPacks(
-    loadInputsFromStorage().map(UrlsToRegisterObject)
+    loadInputs().map(UrlsToRegisterObject)
 )
