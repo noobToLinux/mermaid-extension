@@ -22,7 +22,11 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://mermaid.live/"],
+            "matches": [
+                "https://mermaid.live/",
+                "https://noobtolinux.github.io/mermaid-live-editor/*",
+                "https://mermaid-js.github.io/mermaid-live-editor/*"
+            ],
             "js": ["/inject.js"],
             "run_at": "document_start"
         }
@@ -30,10 +34,16 @@
     "web_accessible_resources": [
         {
             "resources": ["content.js"],
-            "matches": ["https://mermaid.live/*"]
+            "matches": [
+                "https://mermaid.live/*",
+                "https://noobtolinux.github.io/mermaid-live-editor/*",
+                "https://mermaid-js.github.io/mermaid-live-editor/*"
+            ]
         }
     ],
     "host_permissions": [
-        "https://mermaid.live/*"
+        "https://mermaid.live/*",
+        "https://noobtolinux.github.io/mermaid-live-editor/*",
+        "https://mermaid-js.github.io/mermaid-live-editor/*"
     ]
 }
