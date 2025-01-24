@@ -12,9 +12,26 @@ function UrlsToRegisterObject(UrlOb){
 
 function loadInputs() {
     const data = JSON.parse(document.getElementById('extension-data').innerText)
+    /*
+    data has the shape:
+    [
+        {
+            url: part of url for lazy loading of icons (example: @iconify-json/logos)
+            name: 'some name all minus no spaces no numbers, just lower case lyrics'
+        }
+    ]
+    */
     return data;
 }
 
-mermaid.registerIconPacks(
-    loadInputs().map(UrlsToRegisterObject)
-)
+function mermaidRegisterProcess(){
+    let inputs = loadInputs();
+    if (inputs){
+        mermaid.registerIconPacks(
+            loadInputs().map(UrlsToRegisterObject)
+        )
+    }
+    return undefined;
+}
+
+mermaidRegisterProcess();
