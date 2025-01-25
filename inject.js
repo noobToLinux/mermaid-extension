@@ -19,10 +19,12 @@ async function injectDataAndScript() {
     document.body.appendChild(hiddenDiv);
 
     // Inyectar script de contenido
+    /*
     const script = document.createElement("script");
     script.src = chrome.runtime.getURL("content.js"); // Ruta relativa al archivo de script
     script.type = "module"; // Asegura que se trate como un módulo
     (document.head || document.documentElement).appendChild(script);
+    */
 }
 
 // Ejecutar la función principal
