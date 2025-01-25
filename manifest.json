@@ -31,14 +31,6 @@
             "run_at": "document_start"
         }
     ],
-    "web_accessible_resources": [
-        {
-            "resources": ["/content.js"],
-            "matches": [
-                "https://mermaid.live/*"
-            ]
-        }
-    ],
     "host_permissions": [
         "https://mermaid.live/*",
         "https://noobtolinux.github.io/mermaid-live-editor/*",

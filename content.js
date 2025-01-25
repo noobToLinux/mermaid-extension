@@ -1,6 +1,15 @@
 import mermaid from 'CDN/mermaid.esm.mjs';
 
 
+/*
+This file is unused and it is just to keep the idea of how the app should be to
+make the extension work
+
+This should go to the file mermaid.ts in the mermaid-live-editor repo
+
+it also needs changes to proper typescript typing.
+*/
+
 function UrlsToRegisterObject(UrlOb){
     let name = UrlOb.name;
     let url = UrlOb.url;
