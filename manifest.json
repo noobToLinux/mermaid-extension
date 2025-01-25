@@ -33,11 +33,9 @@
     ],
     "web_accessible_resources": [
         {
-            "resources": ["content.js"],
+            "resources": ["/content.js"],
             "matches": [
-                "https://mermaid.live/*",
-                "https://noobtolinux.github.io/mermaid-live-editor/*",
-                "https://mermaid-js.github.io/mermaid-live-editor/*"
+                "https://mermaid.live/*"
             ]
         }
     ],
