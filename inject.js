@@ -46,6 +46,3 @@ function waitSync(milliseconds) {
       // Bucle vacío para bloquear el tiempo
     }
 }
-
-//Pause to force load before the rest of the app
-waitSync(200);
