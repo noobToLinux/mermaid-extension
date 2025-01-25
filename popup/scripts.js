@@ -2,9 +2,12 @@
 
 
 function check_url(text){
-    let start = '@iconify-json/';
+    let start = 'https://unpkg.com/@iconify-json';
+    let end = '.json'
     let condition1 = text.startsWith(start);
-    return condition1;
+    let c2 = text.endsWith(end);
+    let c = condition1 && c2;
+    return c;
 }
 
 function check_name(text){
