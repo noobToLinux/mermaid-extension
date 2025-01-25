@@ -9,7 +9,12 @@ function loadInputsFromStorage() {
 
 async function injectDataAndScript() {
     // Cargar datos de almacenamiento
-    const variables = await loadInputsFromStorage();
+    const {name,url} = await loadInputsFromStorage();
+
+    const variables = {
+        name:name,
+        url: JSON.stringify(await fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()))
+    }
 
     // Inyectar datos en el objeto global `window`
     const hiddenDiv = document.createElement("div");
