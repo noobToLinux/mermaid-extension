@@ -9,11 +9,16 @@ function loadInputsFromStorage() {
 
 async function injectDataAndScript() {
     // Cargar datos de almacenamiento
-    const {name,url} = await loadInputsFromStorage();
+    const list = await loadInputsFromStorage();
 
-    const variables = {
-        name:name,
-        url: JSON.stringify(await fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()))
+    let variables = [];
+    for (let i = 0; i < lista.length; i++) {
+        let {name,url} = list[i];
+        let variable = {
+            name:name,
+            url: JSON.stringify(await fetch(url).then((res) => res.json()))
+        }
+        variables.push(variable);
     }
 
     // Inyectar datos en el objeto global `window`
