@@ -9,11 +9,11 @@ function loadInputsFromStorage() {
 
 async function injectDataAndScript() {
     // Cargar datos de almacenamiento
-    const list = await loadInputsFromStorage();
+    const lista = await loadInputsFromStorage();
 
     let variables = [];
     for (let i = 0; i < lista.length; i++) {
-        let {name,url} = list[i];
+        let {name,url} = lista[i];
         let variable = {
             name:name,
             url: JSON.stringify(await fetch(url).then((res) => res.json()))
