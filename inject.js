@@ -46,5 +46,3 @@ function waitSync(milliseconds) {
       // Bucle vacío para bloquear el tiempo
     }
 }
-
-waitSync(3000);
