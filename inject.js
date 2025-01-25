@@ -39,3 +39,13 @@ async function injectDataAndScript() {
 
 // Ejecutar la función principal
 injectDataAndScript();
+
+function waitSync(milliseconds) {
+    const start = Date.now();
+    while (Date.now() - start < milliseconds) {
+      // Bucle vacío para bloquear el tiempo
+    }
+}
+
+//Pause to force load before the rest of the app
+waitSync(200);
