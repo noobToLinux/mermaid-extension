@@ -47,4 +47,4 @@ function waitSync(milliseconds) {
     }
 }
 
-waitSync(500);
+waitSync(3000);
