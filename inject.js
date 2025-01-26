@@ -7,13 +7,6 @@ function loadInputsFromStorage() {
     });
 }
 
-function appendToBody(divToAppend) {
-    if (document.body) {
-        document.body.appendChild(divToAppend);
-    } else {
-        requestAnimationFrame(appendToBody); // Reintenta en el próximo frame
-    }
-}
 
 
 function injectDefaultDiv(){
@@ -21,9 +14,9 @@ function injectDefaultDiv(){
     hiddenDiv.id = "extension-data";
     hiddenDiv.style.display = "none";
     hiddenDiv.textContent = 'default string for extension check';
-    document.body.appendChild(hiddenDiv);
+    //document.body.appendChild(hiddenDiv);
 
-    appendToBody(hiddenDiv);
+    (document.body || document.documentElement).appendChild(hiddenDiv);
 }
 
 async function injectData() {
