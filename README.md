@@ -23,10 +23,10 @@ And that is all, if you go to my version of it, it will work as [documented](htt
 
 ## App documentation
 
-* assets folder, it has the images.
-* popup folder, it has the functionality for the popup (what appears when you click on the extension)
-* content.js: Currently unused.
-* inject.js: What is injected in the live editor page.
+* *assets folder*, it has the images.
+* *popup folder*, it has the functionality for the popup (what appears when you click on the extension)
+* **content.js**: Currently unused.
+* **inject.js**: What is injected in the live editor page.
   * It just injects an html div with the content of the popup.
 
 
