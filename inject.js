@@ -14,7 +14,7 @@ function injectDefaultDiv(){
     hiddenDiv.id = "extension-data";
     hiddenDiv.style.display = "none";
     hiddenDiv.textContent = 'default string for extension check';
-    document.body.appendChild(hiddenDiv);
+    document.documentElement.appendChild(hiddenDiv);
 }
 
 async function injectData() {
