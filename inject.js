@@ -32,7 +32,6 @@ async function injectDataAndScript() {
     // Inyectar datos en el objeto global `window`
     const hiddenDiv = document.getElementById("extension-data");
     hiddenDiv.textContent = JSON.stringify(variables);
-    document.body.appendChild(hiddenDiv);
 }
 
 // Ejecutar la función principal
