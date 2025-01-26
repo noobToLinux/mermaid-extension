@@ -8,7 +8,6 @@ function loadInputsFromStorage() {
 }
 
 
-
 function injectDefaultDiv(){
     const hiddenDiv = document.createElement("div");
     hiddenDiv.id = "extension-data";
@@ -21,19 +20,6 @@ async function injectData() {
     // Cargar datos de almacenamiento
     injectDefaultDiv();
     const variables = await loadInputsFromStorage();
-    /*
-    let variables = [];
-    for (let i = 0; i < lista.length; i++) {
-        let {name,url} = lista[i];
-        let variable = {
-            name:name,
-            url: JSON.stringify(await fetch(url).then((res) => res.json()))
-        }
-        variables.push(variable);
-    }
-    */
-
-    // Inyectar datos en el objeto global `window`
     const hiddenDiv = document.getElementById("extension-data");
     hiddenDiv.textContent = JSON.stringify(variables);
 }
@@ -41,9 +27,3 @@ async function injectData() {
 // Ejecutar la función principal
 injectData();
 
-function waitSync(milliseconds) {
-    const start = Date.now();
-    while (Date.now() - start < milliseconds) {
-      // Bucle vacío para bloquear el tiempo
-    }
-}
