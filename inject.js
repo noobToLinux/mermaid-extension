@@ -19,7 +19,7 @@ function injectDefaultDiv(){
 
 async function injectData() {
     // Cargar datos de almacenamiento
-    //injectDefaultDiv();
+    injectDefaultDiv();
     const variables = await loadInputsFromStorage();
     /*
     let variables = [];
