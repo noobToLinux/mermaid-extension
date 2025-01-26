@@ -7,12 +7,23 @@ function loadInputsFromStorage() {
     });
 }
 
+function appendToBody(divToAppend) {
+    if (document.body) {
+        document.body.appendChild(divToAppend);
+    } else {
+        requestAnimationFrame(appendToBody); // Reintenta en el próximo frame
+    }
+}
+
+
 function injectDefaultDiv(){
     const hiddenDiv = document.createElement("div");
     hiddenDiv.id = "extension-data";
     hiddenDiv.style.display = "none";
     hiddenDiv.textContent = 'default string for extension check';
     document.body.appendChild(hiddenDiv);
+
+    appendToBody(hiddenDiv);
 }
 
 async function injectData() {
