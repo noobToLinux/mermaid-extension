@@ -2,7 +2,7 @@
 
 
 function check_url(text){
-    let start = 'https://unpkg.com/@iconify-json';
+    let start = 'https://unpkg.com/';
     let end = '.json'
     let condition1 = text.startsWith(start);
     let c2 = text.endsWith(end);
