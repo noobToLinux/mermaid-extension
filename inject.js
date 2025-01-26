@@ -15,8 +15,9 @@ function injectDefaultDiv(){
     document.body.appendChild(hiddenDiv);
 }
 
-async function injectDataAndScript() {
+async function injectData() {
     // Cargar datos de almacenamiento
+    injectDefaultDiv();
     const lista = await loadInputsFromStorage();
 
     let variables = [];
@@ -35,8 +36,7 @@ async function injectDataAndScript() {
 }
 
 // Ejecutar la función principal
-injectDefaultDiv();
-injectDataAndScript();
+injectData();
 
 function waitSync(milliseconds) {
     const start = Date.now();
