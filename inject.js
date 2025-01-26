@@ -19,9 +19,9 @@ function injectDefaultDiv(){
 
 async function injectData() {
     // Cargar datos de almacenamiento
-    injectDefaultDiv();
-    const lista = await loadInputsFromStorage();
-
+    //injectDefaultDiv();
+    const variables = await loadInputsFromStorage();
+    /*
     let variables = [];
     for (let i = 0; i < lista.length; i++) {
         let {name,url} = lista[i];
@@ -31,6 +31,7 @@ async function injectData() {
         }
         variables.push(variable);
     }
+    */
 
     // Inyectar datos en el objeto global `window`
     const hiddenDiv = document.getElementById("extension-data");
