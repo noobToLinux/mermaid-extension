@@ -17,14 +17,11 @@ jobs:
 
       - name: Create a zip file of the extension
         run: |
-          # Crear un directorio temporal para almacenar los archivos que se van a comprimir
-          mkdir extension
-
           # Comprimir los archivos en un archivo .zip
-          zip -r extension/extension.zip * -x '*.github*' 'content.js'
+          zip -r extension.zip * -x '*.github*' 'content.js'
 
       - name: Upload the zip file as an artifact
         uses: actions/upload-artifact@v4
         with:
           name: extension-zip
-          path: extension/extension.zip
+          path: extension.zip
