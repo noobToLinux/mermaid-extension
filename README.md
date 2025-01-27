@@ -2,12 +2,12 @@
 Extension that allows to import your own icons and visualize them on mermaid online editors.
 
 ## Introduction
-This extension allows you to extend the usage of [mermaid live editor](https://mermaid.live/), the official application allows you to add your own icons from [icones](https://icones.js.org/), however this is only possible if you install the app locally. This is said in the their official documentation ([here](https://mermaid.js.org/config/icons.html)).
+This extension allows you to extend the usage of [mermaid live editor](https://mermaid.live/). The official application allows you to add your own icons from [icones](https://icones.js.org/), however this is only possible if you install the app locally or deploy it yourself, [check here](https://mermaid.js.org/config/icons.html).
 
 With the extension you can import your own logos and use them within the live app. Nevertheless, currently it only works on my forked version of it [here](https://noobtolinux.github.io/mermaid-live-editor/).
 
 ## Usage
-Once you install the app from the marketplace, you will have the extension popup just like the image:
+Once you install the app from the marketplace (not yet there), you will have the extension popup just like the image:
 
 ![PopupImage](./assets/ExtensionPopup.png)
 
