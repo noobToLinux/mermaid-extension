@@ -12,7 +12,7 @@ Once you install the app from the marketplace (not yet there), you will have the
 ![PopupImage](./assets/ExtensionPopup.png)
 
 * ***Label***: the label that you will use in the app text editor.
-* ***Iconify package*** The iconify package with the icons ([Official example]('https://unpkg.com/@iconify-json/logos@1/icons.json')) and must start with https://unpkg.com/ and end with .json for the extension to work.
+* ***Iconify package*** The iconify npm package with the icons ([Official example, @iconify-json/logos]('https://unpkg.com/@iconify-json/logos@1/icons.json')).
 
 You will start without any rows, you can add one by pressing "Add row", and you will need to click on "Save" to save them (There is no animation, to prove it was saved, close and open the popup again, or click outside and open it again). Always locally (on your computer).
 
@@ -23,7 +23,7 @@ And that is all, if you go to my version of it, it will work as [documented](htt
 
 ## How to get new icons
 
-Once you have chosen your icons from the [page](https://icones.js.org/) you need to do the next steps:
+Once you have chosen your icons from the [page](https://icones.js.org/) you need to do the steps specified in the next example:
 
 ### Example
 
