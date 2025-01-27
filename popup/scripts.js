@@ -7,7 +7,7 @@ function check_url(text){
     let condition1 = text.startsWith(start);
     let c2 = text.endsWith(end);
     let c = condition1 && c2;
-    return c;
+    return true;
 }
 
 function check_name(text){
@@ -49,7 +49,7 @@ function add_row(name='',value='') {
 
     // Crear y añadir el span
     const span_0 = document.createElement("span");
-    span_0.textContent = "Name for icons";
+    span_0.textContent = "Label";
     newDiv.appendChild(span_0);
 
     // Crear y añadir el input
@@ -63,7 +63,7 @@ function add_row(name='',value='') {
 
     // Crear y añadir el span
     const span = document.createElement("span");
-    span.textContent = "Url with icons";
+    span.textContent = "Iconify Package";
     newDiv.appendChild(span);
 
     // Crear y añadir el input
