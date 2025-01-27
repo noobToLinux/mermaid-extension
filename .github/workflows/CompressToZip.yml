@@ -24,7 +24,7 @@ jobs:
           cp -r ./* extension
 
           # Comprimir los archivos en un archivo .zip
-          zip -r extension.zip extension
+          zip -r extension/extension.zip * -x '*.github*' 'content.js'
 
       - name: Upload the zip file as an artifact
         uses: actions/upload-artifact@v2
